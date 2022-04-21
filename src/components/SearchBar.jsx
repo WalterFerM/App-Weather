@@ -1,6 +1,17 @@
 import React from 'react';
 
-export default function SearchBar(props) {
+export default function SearchBar({onSearch}) {
   // acá va tu código
-  return <div>Search Bar Component</div>
+  function forInputCity (){
+    if(typeof onSearch === 'function'){
+      const inputCity = document.getElementById("search-input");
+      onSearch(inputCity.value);
+    }
+  }
+
+  return (
+  <div>
+    <input type="text" name="input-city" id="search-input" placeholder="Ciudad..." />
+    <button onClick={forInputCity}>Agregar</button>
+  </div>)
 };
