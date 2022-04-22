@@ -1,0 +1,66 @@
+.card {
+    border-style: solid;
+    border-width: var(--border-comp);
+    border-color: var(--border-comp-color);
+    border-radius: 10px;
+    margin: 0.2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+
+    position: relative;
+    align-items: center;
+
+    background-color: var(--back-comp-color);
+}
+
+.cityName {
+    grid-column: 1 / span 3;
+    font-family: ubuntu;
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--city-text-color);
+}
+
+.closeBtn {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+
+    border-radius: 100%;
+    border-style: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    font-weight: bold;
+    background-color: transparent;
+    color: var(--btn-normal);
+    font-size: 0.8rem;
+    transition: 300ms;
+}
+
+.closeBtn:hover {
+    background-color: var(--btn-normal);
+    color: var(--btn-hover-x);
+    border-color: var(--btn-normal);
+}
+
+.closeBtn:focus {
+    outline: 1px solid var(--btn-normal);
+}
+
+.temp {
+    display: flex;
+    flex-direction: column;
+}
+
+.temp > label {
+    text-transform: uppercase;
+    font-family: ubuntu;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.temp > span {
+    font-size: 0.9rem;
+}

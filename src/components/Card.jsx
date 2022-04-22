@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './Card.module.css';
+
 export default function Card({max, min, name, img, onClose}) {
 
   function validOnClose(){
@@ -7,14 +9,14 @@ export default function Card({max, min, name, img, onClose}) {
   }
 
   return (
-  <div>
-    <button onClick={validOnClose}>X</button>
-    <span>{name}</span>
-    <div>
+  <div className={styles.card}>
+    <button className={styles.closeBtn} onClick={validOnClose}>X</button>
+    <span className={styles.cityName}>{name}</span>
+    <div className={styles.temp}>
       <label>Max</label>
       <span>{max}</span>
     </div>
-    <div>
+    <div className={styles.temp}>
       <label>Min</label>
       <span>{min}</span>
     </div>

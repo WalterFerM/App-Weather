@@ -1,11 +1,13 @@
 import React from 'react';
 import Card from './Card';
 
+import style from './Cards.module.css'
+
 export default function Cards({cities}) {
   // acá va tu código
   // tip, podés usar un map
   return (
-  <div>
+  <div className={style.cards}>
     {cities.map((city)=>(
       <Card
       id={city.id}
