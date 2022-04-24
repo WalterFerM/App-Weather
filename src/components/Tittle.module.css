@@ -3,10 +3,15 @@
     justify-content: center;
 }
 
-h1 {
+.title {
     margin: auto 0.25rem;
     padding: 2rem 2rem 2rem 2rem;
     color: var(--title-color);
+}
+
+.logoType {
+    width: 3rem;
+    height: 3rem;
 }
 
 
