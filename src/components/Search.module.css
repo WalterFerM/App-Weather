@@ -3,10 +3,6 @@
 
 .search {
     position: relative;
-    width: calc(100%-0.5rem);
-    display: flex;
-    /* justify-content: center; */
-    align-content: center;
     margin-left: 0.25rem;
     margin-right: 0.25rem;
 }
