@@ -20,7 +20,7 @@ export default function Card({max, min, name, img, onClose}) {
       <label>Min</label>
       <span>{`${min- 273.15}°`}</span>
     </div>
-    <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="icono del clima" ClassName={styles.cardIcon}/>
+    <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="icono del clima" className={styles.cardIcon}/>
     
   </div>)
 };
