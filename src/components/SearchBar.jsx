@@ -1,6 +1,23 @@
 import React from 'react';
+import { FaSearch } from "react-icons/fa";
+import Card from "./Card.module.css";
 
-export default function SearchBar(props) {
+import style from './Search.module.css';
+
+export default function SearchBar({onSearch}) {
   // acá va tu código
-  return <div>Search Bar Component</div>
+  function forInputCity (){
+    if(typeof onSearch === 'function'){
+      const inputCity = document.getElementById("search-input");
+      onSearch(inputCity.value);
+    }
+  }
+
+  return (
+  <div className={style.search}>
+    <input type="text" name="input-city" id="search-input" placeholder=" Search city..." />
+    <button onClick={forInputCity} className={Card.closeBtn}>
+      <FaSearch/> <span >Search</span>
+    </button>
+  </div>)
 };

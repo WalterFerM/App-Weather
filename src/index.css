@@ -1,13 +1,41 @@
+:root {
+  --barn-red: #780000;
+  --venetian-red: #C1121F;
+  --papaya-whip: #FDF0D5;
+  --prussian-blue: #003049;
+  --air-blue: #669BBC;
+  --papaya-rgba: rgba(253, 240, 213, 0.6);
+
+  --border-comp: 1px;
+  --bkg-app: #00304952;
+
+  --appBackGradien: radial-gradient(180vw ,#60efff, #0061ff);
+  --title-color: var(--papaya-whip);
+  --border-comp-color: var(--prussian-blue);
+  --back-comp-color: var(--papaya-rgba);
+  --city-text-color: var(--prussian-blue);
+
+  --btn-normal: var(--venetian-red);
+  --btn-hover-x: var(--papaya-whip);
+
+  --credits-color: var(--prussian-blue);
+  --a-color: var(--papaya-whip);
+
+  background: var(--appBackGradien);
+  
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+};

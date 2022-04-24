@@ -1,6 +1,26 @@
 import React from 'react';
 
-export default function Card(props) {
-  // acá va tu código
-  return <div>Card Component</div>
+import styles from './Card.module.css';
+
+export default function Card({max, min, name, img, onClose}) {
+
+  function validOnClose(){
+    if(typeof onClose === 'function') onClose();
+  }
+
+  return (
+  <div className={styles.card}>
+    <button className={styles.closeBtn} onClick={validOnClose}>X</button>
+    <span className={styles.cityName}>{name}</span>
+    <div className={styles.temp}>
+      <label>Max</label>
+      <span>{max}</span>
+    </div>
+    <div className={styles.temp}>
+      <label>Min</label>
+      <span>{min}</span>
+    </div>
+    <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="icono del clima" className={styles.cardIcon}/>
+    
+  </div>)
 };
