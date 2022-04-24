@@ -3,22 +3,21 @@ import Card from './Card';
 
 import style from './Cards.module.css'
 
-export default function Cards({cities}) {
+export default function Cards({ cities, onRemove }) {
   // acá va tu código
   // tip, podés usar un map
   return (
   <div className={style.cards}>
     {cities.map((city)=>(
       <Card
-      id={city.id}
-      max={city.main.temp_max}
-      min={city.main.temp_min}
+      key={city.id}
+      max={city.max}
+      min={city.min}
       name={city.name}
-      img={city.weather[0].icon}
-      onClose={()=>alert(city.name)}
+      img={city.img}
+      onClose={()=> {return onRemove(city.id)}}
       />
-    ))
-
-    }
-  </div>)
+    ))}
+  </div>
+  );
 };
